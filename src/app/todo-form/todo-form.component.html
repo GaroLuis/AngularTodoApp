@@ -1,3 +1,9 @@
+<div class="bg-blue-100 m-5 p-3">
 <form [formGroup]="todoForm" (ngSubmit)="onSubmit()">
-  <input id="todo" type="text" formControlName="todo">
+  <div class="inline-flex w-full gap-2 p-2">
+    <input id="completed" type="checkbox" formControlName="completed" class="w-5">
+    <input id="todo" type="text" formControlName="todo" class="w-full border-2 border-gray-400">
+  </div>
+
 </form>
+</div>
