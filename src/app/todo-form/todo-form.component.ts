@@ -4,7 +4,7 @@ import { FormBuilder, Validators } from "@angular/forms";
 @Component({
   selector: 'todo-form',
   templateUrl: './todo-form.component.html',
-  styleUrls: ['./todo-form.component.sass']
+  styleUrls: ['./todo-form.component.scss']
 })
 export class TodoFormComponent {
   todoForm = this.formBuilder.group({
