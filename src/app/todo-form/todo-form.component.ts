@@ -12,6 +12,11 @@ export class TodoFormComponent {
   })
 
   onSubmit() {
+    if (!this.todoForm.valid) {
+      console.log('Invalid');
+      return
+    }
+
     console.log(this.todoForm.value);
   }
 
