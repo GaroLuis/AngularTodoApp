@@ -11,6 +11,10 @@ export class TodoFormComponent {
     completed: [false]
   })
 
+  get todo() {
+    return this.todoForm.get('todo')?.value?.trim()
+  }
+
   onSubmit() {
     if (!this.todoForm.valid) {
       console.log('Invalid');
