@@ -1,6 +1,6 @@
 <h1 class="flex justify-center font-bold text-3xl">To Do</h1>
-<div *ngFor="let todo of todos; let i=index">
-  <todo-form></todo-form>
+<div *ngFor="let todo of todos">
+  <todo-form [todoInput]="todo"></todo-form>
 </div>
 <div class="flex justify-center">
   <button (click)="addTodo()" class="bg-blue-400 p-2 rounded text-gray-700 border-2 border-gray-700">Add todo</button>
