@@ -8,6 +8,7 @@ import { ReactiveFormsModule } from "@angular/forms";
 import { TodosComponent } from './todos/todos.component';
 import { UserComponent } from './user/user.component';
 import { Route, RouterModule } from "@angular/router";
+import { CdkDrag, CdkDropList } from "@angular/cdk/drag-drop";
 
 const ROUTES: Array<Route> = [
   {path: 'user', component: UserComponent},
@@ -27,7 +28,9 @@ const ROUTES: Array<Route> = [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    RouterModule.forRoot(ROUTES)
+    RouterModule.forRoot(ROUTES),
+    CdkDropList,
+    CdkDrag
   ],
   providers: [],
   bootstrap: [AppComponent]

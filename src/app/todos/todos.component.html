@@ -1,6 +1,8 @@
 <h1 class="flex justify-center font-bold text-3xl">To Do</h1>
-<div *ngFor="let todo of todos">
-  <todo-form [todoInput]="todo"></todo-form>
+<div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+  <div *ngFor="let todo of todos" cdkDrag class="cursor-move">
+    <todo-form [todoInput]="todo"></todo-form>
+  </div>
 </div>
 <div class="flex justify-center">
   <button (click)="addTodo()" class="bg-blue-400 p-2 rounded text-gray-700 border-2 border-gray-700">Add todo</button>
